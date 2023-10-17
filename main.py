@@ -6,7 +6,7 @@ def collatz(num):
     
 num = 150
 
-init = open(str(num) + '.csv', 'x')
+init = open('outputs/' + str(num) + '.csv', 'x')
 init.write(str(num))
 filename = num
 init.close()
@@ -14,5 +14,6 @@ init.close()
 while num != 1:
     num = collatz(num)
     print(num)
-    out = open(str(filename) + '.csv', 'a')
+    out = open('outputs/' + str(filename) + '.csv', 'a')
     out.write(',\n' + str(num))
+    out.close()
