@@ -4,11 +4,13 @@ def collatz(num):
     else:
         return 3 * num + 1
     
-num = 1500
+num = 150
 
 init = open(str(num) + '.csv', 'x')
 init.write(str(num))
 filename = num
+init.close()
+
 while num != 1:
     num = collatz(num)
     print(num)
